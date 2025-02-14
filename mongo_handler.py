@@ -1,9 +1,14 @@
 from pymongo import MongoClient
 import datetime
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 class MongoHandler:
     def __init__(self, db_name="riscv_translator", collection_name="translations"):
-        self.client = MongoClient("mongodb+srv://aaf9407:@cluster0.pmxxs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+        mongo_uri = os.getenv("MONGODB_URI")
+        if not mongo_uri:
+            raise ValueError("Error: MONGODB_URI is not set. Please set it in an environment variable or .env file.")
+        self.client = MongoClient(mongo_uri)
         self.db = self.client[db_name]
         self.collection = self.db[collection_name]
 
@@ -12,7 +17,7 @@ class MongoHandler:
         record = {
             "binary_code": binary_code,
             "assembly_code": assembly_code,
-            "timestamp": datetime.datetime.utcnow()
+            "timestamp": datetime.datetime.now(datetime.timezone.utc)
         }
         self.collection.insert_one(record)
 
