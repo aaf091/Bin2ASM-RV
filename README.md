@@ -1,4 +1,4 @@
-#32-bit RISC-V Binary/Hex to Assembly Language Translator
+# 32-bit RISC-V Binary/Hex to Assembly Language Translator
 
 A simple translator for converting 32-bit RISC-V machine code (binary or hex) into assembly language instructions.
 
