@@ -351,7 +351,7 @@ if __name__ == "__main__":
     path_list = ['testcase0', 'testcase1', 'testcase2']
 
     parser = argparse.ArgumentParser(description='32-bit RISC-V Interpreter')
-    parser.add_argument('--iodir', default="/Users/aaditfadia/Downloads/CSA Project/Bin2ASM-RV/input/", type=str, help='Base directory containing input files.')
+    parser.add_argument('--iodir', default="/Users/aaditfadia/Downloads/CSA Project/Bin2ASM-RV/input", type=str, help='Base directory containing input files.')
     args = parser.parse_args()
 
     base_io_directory = os.path.abspath(args.iodir)
