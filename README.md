@@ -27,31 +27,29 @@ This project implements a 32-bit RISC-V single-stage core interpreter. It simula
 ## File Structure
 ```
 Bin2ASM-RV/ 
-
 ├── code/
-
 │ ├── input/ 
-
 │ │ ├── testcase0/ 
-
 │ │ │ ├── imem.txt 
-
 │ │ │ ├── dmem.txt 
-
 │ │ ├── testcase1/ 
-
 │ │ │ ├── imem.txt 
-
 │ │ │ ├── dmem.txt 
-
 │ │ ├── testcase2/ 
-
 │ │ ├──├── imem.txt 
-
 │ │ ├──├── dmem.txt 
-
-│ ├── main.py 
-
+│ ├── main.py
+├── submissions/
+│ ├── output/
+│ │ ├── testcase0/ 
+│ │ │ ├── imem.txt 
+│ │ │ ├── dmem.txt 
+│ │ ├── testcase1/ 
+│ │ │ ├── imem.txt 
+│ │ │ ├── dmem.txt 
+│ │ ├── testcase2/ 
+│ │ ├──├── imem.txt 
+│ │ ├──├── dmem.txt 
 ├── README.md
 ```
 ---
